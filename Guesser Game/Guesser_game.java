@@ -3,7 +3,7 @@ class guesser{
     int guesNum;
     int guessingNum(){
         Scanner sc=new Scanner(System.in);
-        System.out.println("         GAME STARTED");
+        System.out.println("         GAME STARTED ");
         System.out.println("Please guess the number btween 0-9!");
         System.out.println("Guesser! kindly guess the number");
         guesNum=sc.nextInt();
@@ -11,47 +11,35 @@ class guesser{
     }
 }
 class Player{
-    int gues_num1,gues_num2,gues_num3;
-    int player1(){
+    int gues_num;
+    int player(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Umpire!");
-        System.out.println("Player1! Kindly guess the number");
-        gues_num1=sc.nextInt();
-        return gues_num1;
+        System.out.println("Player! Kindly guess the number");
+        gues_num=sc.nextInt();
+        return gues_num;
     }
-    int player2(){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Player2! Kindly guess the number");
-        gues_num2=sc.nextInt();
-        return gues_num2;
-    }
-    int player3(){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Player3! Kindly guess the number");
-        gues_num3=sc.nextInt();
-        return gues_num3;
-    }
+
 }
 class Umpire{
     int guessedNum,gues_num1,gues_num2,gues_num3;
     void umpire(){
         guesser gues=new guesser();
-        Player player=new Player();
+        Player p1=new Player();
+        Player p2=new Player();
+        Player p3=new Player();
         guessedNum=gues.guessingNum();
-        gues_num1=player.player1();
-        gues_num2=player.player2();
-        gues_num3=player.player3();
+        gues_num1=p1.player();
+        gues_num2=p2.player();
+        gues_num3=p3.player();
     }
     void compare() {
         if (guessedNum == gues_num1) {
-            if (guessedNum==gues_num1&&guessedNum==gues_num2&&guessedNum==gues_num3) {
-                System.out.println("All Player win!");
-            }
-            else if (guessedNum==gues_num1&&guessedNum==gues_num2) {
+            if (guessedNum==gues_num2) {
                 System.out.println("Player1 & Player2 both wins!");
             } else if (guessedNum==gues_num2&&guessedNum==gues_num3) {
-                System.out.println("Player2 & Player3 both wins!");
-            }else if (guessedNum==gues_num1&&guessedNum==gues_num3) {
+                System.out.println("All Player win!");
+            }else if (guessedNum==gues_num3) {
                 System.out.println("Player1 & Player3 both wins!");
             }
             else {
@@ -59,15 +47,13 @@ class Umpire{
             }
         } else if (guessedNum == gues_num2) {
 
-            if (guessedNum==gues_num1&&guessedNum==gues_num2&&guessedNum==gues_num3) {
+            if (guessedNum==gues_num1&&guessedNum==gues_num3) {
                 System.out.println("All Player win!");
             }
-            else if (guessedNum==gues_num1&&guessedNum==gues_num2) {
+            else if (guessedNum==gues_num1) {
                 System.out.println("Player1 & Player2 both wins!");
-            } else if (guessedNum==gues_num2&&guessedNum==gues_num3) {
+            } else if (guessedNum==gues_num3) {
                 System.out.println("Player2 & Player3 both wins!");
-            }else if (guessedNum==gues_num1&&guessedNum==gues_num3) {
-                System.out.println("Player1 & Player3 both wins!");
             }
             else {
                 System.out.println("Payer2 wins!");
@@ -76,12 +62,9 @@ class Umpire{
         } else if (guessedNum == gues_num3) {
             if (guessedNum==gues_num1&&guessedNum==gues_num2&&guessedNum==gues_num3) {
                 System.out.println("All Player win!");
-            }
-            else if (guessedNum==gues_num1&&guessedNum==gues_num2) {
-                System.out.println("Player1 & Player2 both wins!");
-            } else if (guessedNum==gues_num2&&guessedNum==gues_num3) {
+            } else if (guessedNum==gues_num2) {
                 System.out.println("Player2 & Player3 both wins!");
-            }else if (guessedNum==gues_num1&&guessedNum==gues_num3) {
+            }else if (guessedNum==gues_num1) {
                 System.out.println("Player1 & Player3 both wins!");
             }
             else {
@@ -97,6 +80,7 @@ class Umpire{
         u.umpire();
         u.compare();
     }
+
 }
 public class Guesser_game {
     public static void main(String[] args) {
