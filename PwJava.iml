@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/2-D Array" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Enhanced_for_loop" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Quiz" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/String" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
