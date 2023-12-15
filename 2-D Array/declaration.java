@@ -23,11 +23,11 @@ public class declaration {
 //                  {8,2},              //Jagged array
 //                   {9,4,8}
 //        };
-//        for (int i=0;i<3;i++){
-//            for (int j=0;j<2;j++){
-//                a[i][j]= sc.nextInt();
-//            }
-//        }
+        for (int i=0;i<3;i++){
+            for (int j=0;j<a[i].length;j++){
+                a[i][j]= sc.nextInt();
+            }
+        }
 
         for (int i=0;i<3;i++){
             for (int j=0;j<a[i].length;j++){
