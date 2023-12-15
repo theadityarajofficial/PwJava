@@ -1,12 +1,13 @@
 import java.util.*;
 class guesser{
+    private
     int guesNum;
     int guessingNum(){
         Scanner sc=new Scanner(System.in);
         System.out.println("         GAME STARTED ");
         System.out.println("Guesser! kindly guess the number");
         guesNum=sc.nextInt();
-        System.out.println("Umpire!");
+        System.out.println("           Umpire!");
 
         return guesNum;
     }
@@ -14,7 +15,7 @@ class guesser{
 class Player{
     int gues_num;
     int player(){
-        Scanner sc=new Scanner(System.in);
+        var sc=new Scanner(System.in);
         System.out.println("Player! Kindly guess the number");
         gues_num=sc.nextInt();
         return gues_num;
@@ -38,6 +39,7 @@ class Umpire{
         gues_num3=p3.player();
     }
     void compare() {
+        Scanner sc=new Scanner(System.in);
         if (guessedNum == gues_num1) {
             if (guessedNum==gues_num2&&guessedNum==gues_num3) {
                 System.out.println("All Player win!");
@@ -73,18 +75,26 @@ class Umpire{
 
         } else {
             System.out.println("Game Lost!");
+            System.out.println("If you want to retry enter 1");
+            int i= sc.nextInt();
+            if (i==1){
+                combine();
+            }
         }
     }
+    private
     void combine(){
-        Umpire u=new Umpire();
-        u.umpire();
-        u.compare();
+        umpire();
+        compare();
+    }
+    void show(){    //encapsulation
+        combine();
     }
 
 }
 public class Guesser_game {
     public static void main(String[] args) {
         Umpire ump=new Umpire();
-        ump.combine();
+        ump.show();
     }
 }
