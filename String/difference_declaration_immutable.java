@@ -11,5 +11,6 @@ public class difference_declaration_immutable {
         System.out.println(s);
         System.out.println(S1.equals(S3));
         System.out.println(S1.equals(S5));
+        System.out.println(S1.equalsIgnoreCase(S5));
     }
 }
