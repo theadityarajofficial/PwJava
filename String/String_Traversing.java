@@ -36,7 +36,7 @@ public class String_Traversing {
         }
         System.out.println(st4);
 
-        
+
 //        by using enhanced for loop concept
         String st5="";
         for (String i:sr) {
