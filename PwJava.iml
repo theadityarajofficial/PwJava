@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Enhanced_for_loop" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Quiz" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/String" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Static" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
