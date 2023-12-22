@@ -13,7 +13,7 @@ class Stud{
         this.sec=sec;
     }
     Stud(){
-
+        
     }
 
     public String getName() {
