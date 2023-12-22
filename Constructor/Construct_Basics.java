@@ -13,7 +13,7 @@ class Stud{
         this.sec=sec;
     }
     Stud(){
-        
+        System.out.println("Default Branch");
     }
 
     public String getName() {
